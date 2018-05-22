@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Match Game</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda" />
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Seaweed+Script"  />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <div class="containter">
+    <header>
+      <h1>Match Game</h1>
+    </header>
+
+    <section class="score-panel">
+      <ul class="check">
+        <li>
+          <i class="fas fa-check"></i>
+        </li>
+        <li>
+          <i class="fas fa-check"></i>
+        </li>
+        <li>
+          <i class="fas fa-check"></i>
+        </li>
+      </ul>
+
+      <span class="moves">0</span> Move(s)
+      <div class="timer"></div>
+      <div class="restart" onclick="startGame()">
+        <i class="fas fa-redo"></i>
+      </div>
+    </section>
+
+    <ul class="deck" id="cardDeck">
+      <li class="card" type="code">
+        <i class="fas fa-code"></i>
+      </li>
+      <li class="card" type="codepen">
+        <i class="fab fa-codepen"></i>
+      </li>
+      <li class="card match" type="html5">
+        <i class="fab fa-html5"></i>
+      </li>
+      <li class="card" type="css3">
+        <i class="fab fa-css3-alt"></i>
+      </li>
+      <li class="card" type="javascript">
+        <i class="fab fa-js-square"></i>
+      </li>
+      <li class="card match" type="html5">
+        <i class="fab fa-html5"></i>
+      </li>
+      <li class="card" type="angular">
+        <i class="fab fa-angular"></i>
+      </li>
+      <li class="card" type="python">
+        <i class="fab fa-python"></i>
+      </li>
+      <li class="card" type="code">
+        <i class="fas fa-code"></i>
+      </li>
+      <li class="card" type="github">
+        <i class="fab fa-github"></i>
+      </li>
+      <li class="card" type="angular">
+        <i class=" fab fa-angular"></i>
+      </li>
+      <li class="card" type="github">
+        <i class="fab fa-github"></i>
+      </li>
+      <li class="card open show" type="css3">
+        <i class="fab fa-css3-alt"></i>
+      </li>
+      <li class="card" type="python">
+        <i class="fab fa-python"></i>
+      </li>
+      <li class="card" type="codepen">
+        <i class=" fab fa-codepen"></i>
+      </li>
+      <li class="card" type="javascript">
+        <i class="fab fa-js-square"></i>
+      </li>
+    </ul>
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Well Done!</h2>
+        <a class="close" href="#">x</a>
+        <div class="content-1">
+          You matched everything! Great Job!
+        </div>
+        <div class="content-2">
+          <p>
+            You made <span id="finalMove"> </span> moves
+          </p>
+          <p>
+            in <span id="totalTime"> </span>
+          </p>
+          <p>
+            Rating:  <span id="checkmarkRating"></span>
+          </p>
+        </div>
+        <button id="play-again" onclick="playAgain()">Play Again?</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
