@@ -109,20 +109,29 @@ h1 {
 .score-panel {
   text-align: left;
   margin-bottom: 10px;
-  display: inline-block;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .score-panel .check {
   margin: 0;
   padding: 0;
-  display: inline-block;
+  display: flex;
   margin: 0 5px 0 0;
 }
 
 .score-panel .check li {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-panel .text {
+  display: flex;
+}
+
+.score-panel .text-counter {
+  margin-left: 10px;
 }
 
 .score-panel .restart {
